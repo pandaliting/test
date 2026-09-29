@@ -21,7 +21,7 @@ context = "\n".join([f"{role}: {msg}" for role, msg in chat_history])
 ai_reply_1 = llm.invoke(context).content
 chat_history.append(("assistant", ai_reply_1))
 print("第一次AI回复:", ai_reply_1)
-
+# 记忆
 # 第二次：带完整历史对话提问
 user_message_2 = "我是谁"
 chat_history.append(("user", user_message_2))  # ← 先加入历史
