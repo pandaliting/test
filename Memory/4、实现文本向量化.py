@@ -7,12 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 # 需要向量的文本
 user_query = "特朗普上一次访华是什么时候？"
 # 创建嵌入模型对象
-# embedding_model = DashScopeEmbeddings(model = "text-embedding-v1",dashscope_api_key="DASHSCOPE_API_KEY")
-embedding_model = OpenAIEmbeddings(
-    model="text-embedding-v1",
-    openai_api_key="SILICONFLOW_API_KEY",  # ← 注意是 openai_api_key
-    openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1"
-)
+embedding_model = DashScopeEmbeddings(model = "text-embedding-v1")
 # 将文本向量化
 vector = embedding_model.embed_query(user_query)
 print(vector)
