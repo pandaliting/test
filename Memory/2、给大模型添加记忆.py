@@ -31,3 +31,5 @@ context = "\n".join([f"{role}: {msg}" for role, msg in chat_history])
 ai_reply_2 = llm.invoke(context).content
 chat_history.append(("assistant", ai_reply_2))
 print("第二次AI回复:", ai_reply_2)
+
+# 近期对话+摘要+关键信息 （构成完整的信息）
